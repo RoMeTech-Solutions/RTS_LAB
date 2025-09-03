@@ -1,1 +1,17 @@
 name: TestLab
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  HelloWorld:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Print Hello Work
+        run: echo "$(cat hello_world.txt)"
