@@ -1,7 +1,7 @@
 name: TestLab
 
 on:
-  push:
+  workflow_dispatch:
     branches: [main]
 
 jobs:
@@ -13,5 +13,5 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Print Hello Work
+      - name: Print Hello Word
         run: echo "$(cat hello_world.txt)"
